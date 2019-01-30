@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRequestActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:id="@+id/app_bar"/>
+    <include
+        layout="@layout/bottom_navigation"
+        android:id="@+id/bottom_navigation" />
+
+    <Spinner
+        android:id="@+id/spinnerWordLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_marginTop="8sp"
+        android:entries="@array/languages"/>
+
+    <EditText
+        android:id="@+id/editTextWordBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerWordLanguage"
+        android:inputType="textCapCharacters"
+        android:hint="@string/editText_word" />
+
+    <TextView
+        android:id="@+id/textViewRequestLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/request_language"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_below="@id/editTextWordBody"/>
+
+    <Spinner
+        android:id="@+id/spinnerTranslationLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewRequestLanguage"
+        android:entries="@array/languages"/>
+
+    <Spinner
+        android:id="@+id/spinnerRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/spinnerTranslationLanguage"
+        android:entries="@array/requests"/>
+
+    <Button
+        android:id="@+id/buttonAddWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerRequest"
+        android:layout_marginTop="8sp"
+        android:text="@string/button_add" />
+
+</RelativeLayout>

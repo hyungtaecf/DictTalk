@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestMainActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:id="@+id/app_bar"/>
+    <include
+        layout="@layout/bottom_navigation"
+        android:id="@+id/bottom_navigation"/>
+
+    <Spinner
+        android:id="@+id/spinnerWordLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_marginTop="8sp"
+        android:entries="@array/languages"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerWordLanguage"
+        android:layout_above="@+id/buttonNewRequest"/>
+
+    <Button
+        android:id="@+id/buttonNewRequest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:text="@string/new_request" />
+
+</RelativeLayout>

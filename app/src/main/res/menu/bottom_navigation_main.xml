@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item-->
+        <!--android:title="People"-->
+        <!--android:id="@+id/action_people"-->
+        <!--android:icon="@drawable/people"-->
+        <!--/>-->
+    <!--<item-->
+        <!--android:title="Chat"-->
+        <!--android:id="@+id/action_chat"-->
+        <!--android:icon="@drawable/chat"-->
+        <!--/>-->
+    <!--<item-->
+        <!--android:title="Account"-->
+        <!--android:id="@+id/action_account"-->
+        <!--android:icon="@drawable/id"-->
+        <!--/>-->
+    <item
+        android:title="Menu"
+        android:id="@+id/action_mainMenu"
+        android:icon="@drawable/ic_menu"
+        />
+    <item
+        android:title="Notifications"
+        android:id="@+id/action_notifications"
+        android:icon="@drawable/ic_notifications"
+        />
+    <item
+        android:title="Profile"
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_profile"
+        />
+</menu>

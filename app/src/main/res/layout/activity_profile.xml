@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:id="@+id/app_bar"/>
+    <include
+        layout="@layout/bottom_navigation"
+        android:id="@+id/bottom_navigation" />
+    <!--TODO CHANGE "NUMBER OF" TO "...COUNT"-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="55dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageViewProfilePicture"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_stars"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProfilePicture"
+                app:layout_constraintStart_toStartOf="@+id/textViewUsername"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/loading"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProfilePicture"
+                app:layout_constraintStart_toEndOf="@+id/imageViewProfilePicture"
+                app:layout_constraintTop_toTopOf="@+id/imageViewProfilePicture" />
+
+            <TextView
+                android:id="@+id/textViewReputation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iconReputation"
+                app:layout_constraintStart_toEndOf="@+id/iconReputation"
+                app:layout_constraintTop_toTopOf="@+id/iconReputation" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePicture"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center_horizontal"
+                android:weightSum="3">
+
+                <ImageButton
+                    android:id="@+id/buttonFriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_add_friend"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/buttonChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_chat_bubble_outline"
+                    android:layout_weight="1"/>
+
+                <ImageButton
+                    android:id="@+id/buttonLists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_list"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewBio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:singleLine="false"
+                android:text="@string/loading"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBioLabel" />
+
+            <TextView
+                android:id="@+id/textViewBioLabel"
+                style="bold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/bio"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutButtons" />
+
+            <TextView
+                android:id="@+id/textViewContributionsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/contributions_label"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBio" />
+
+            <ImageView
+                android:id="@+id/iconLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewContributionsLabel" />
+
+            <TextView
+                android:id="@+id/textViewLikesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                app:layout_constraintBottom_toBottomOf="@+id/iconLikes"
+                app:layout_constraintStart_toEndOf="@+id/iconLikes"
+                app:layout_constraintTop_toTopOf="@+id/iconLikes" />
+
+            <ImageView
+                android:id="@+id/iconDislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_dislike"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconLikes" />
+
+            <TextView
+                android:id="@+id/textViewDislikesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                app:layout_constraintBottom_toBottomOf="@+id/iconDislikes"
+                app:layout_constraintStart_toEndOf="@+id/iconDislikes"
+                app:layout_constraintTop_toTopOf="@+id/iconDislikes" />
+
+            <ImageView
+                android:id="@+id/iconTranslations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:maxHeight="18dp"
+                android:maxWidth="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_translation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconDislikes" />
+
+            <TextView
+                android:id="@+id/textViewTranslationsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                app:layout_constraintBottom_toBottomOf="@+id/iconTranslations"
+                app:layout_constraintStart_toEndOf="@+id/iconTranslations"
+                app:layout_constraintTop_toTopOf="@+id/iconTranslations" />
+
+            <ImageView
+                android:id="@+id/iconSentences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_sentence"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconTranslations" />
+
+            <TextView
+                android:id="@+id/textViewSentencesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                app:layout_constraintBottom_toBottomOf="@+id/iconSentences"
+                app:layout_constraintStart_toEndOf="@+id/iconSentences"
+                app:layout_constraintTop_toTopOf="@+id/iconSentences" />
+
+            <ImageView
+                android:id="@+id/iconVerified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="18dp"
+                android:maxHeight="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_circle_check"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconSentences" />
+
+            <TextView
+                android:id="@+id/textViewVerifiedCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/loading"
+                app:layout_constraintBottom_toBottomOf="@+id/iconVerified"
+                app:layout_constraintStart_toEndOf="@+id/iconVerified"
+                app:layout_constraintTop_toTopOf="@+id/iconVerified" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

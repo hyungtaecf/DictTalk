@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WordRegistrationActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:id="@+id/app_bar"/>
+    <include
+        layout="@layout/bottom_navigation"
+        android:id="@+id/bottom_navigation" />
+
+    <Spinner
+        android:id="@+id/spinnerWordLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar"
+        android:layout_marginTop="8sp"
+        android:entries="@array/languages"/>
+
+    <EditText
+        android:id="@+id/editTextWordBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerWordLanguage"
+        android:inputType="textCapCharacters"
+        android:hint="@string/editText_word" />
+
+    <Spinner
+        android:id="@+id/spinnerTranslationLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:layout_below="@id/editTextWordBody"
+        android:entries="@array/languages"/>
+
+    <EditText
+        android:id="@+id/editTextWordTranslation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerTranslationLanguage"
+        android:inputType="textCapCharacters"
+        android:hint="@string/editText_translation" />
+
+    <TextView
+        android:id="@+id/textViewSourceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:layout_below="@id/editTextWordTranslation"
+        android:text="@string/source"
+        />
+
+    <EditText
+        android:id="@+id/editTextSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewSourceLabel"
+        android:hint="@string/editText_source"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textViewConsiderCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxInverseTranslation"
+        android:layout_marginTop="8sp"
+        android:text="@string/consider_case"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxConsiderCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewConsiderCase"
+        />
+
+    <TextView
+        android:id="@+id/textViewInverseTranslation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSource"
+        android:layout_marginTop="8sp"
+        android:text="@string/textView_inverse_translation"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBoxInverseTranslation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewInverseTranslation"
+        />
+
+    <Button
+        android:id="@+id/buttonAddWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxConsiderCase"
+        android:layout_marginTop="8sp"
+        android:text="@string/button_add" />
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<resources>
+
+    <!--TODO DEPOIS QUE ACABAR 1차 TRADUZIR-->
+    <string name="app_name">Dict Talk</string>
+    <string name="textview">텍스트 뷰</string>
+    <string name="title_activity_my_lists_main">MyListsMainActivity</string>
+    <string name="action_settings">설정</string>
+    <string name="title_activity_login_main">로그인</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">이메일</string>
+    <string name="prompt_password">암호</string>
+    <string name="action_sign_in">로그인 또는 등록</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">이 주소는 유호하지 않습니다.</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_word_meanings">WordMeaningsActivity</string>
+    <string name="title_activity_search_users">SearchUsersActivity</string>
+    <string name="title_activity_search_lists">SearchListsActivity</string>
+
+    <!--BUTTONS-->
+    <string name="button_add">Add</string>
+
+    <!--EDIT TEXT HINTS-->
+    <string name="editText_word">Enter word</string>
+    <string name="editText_translation">Enter translation</string>
+
+    <!--SPINNERS-->
+    <string name="spinner_language_notSelected">--언어 선택--</string>
+
+    <string-array name="my_lists">
+        <item>Animals</item>
+        <item>Places</item>
+        <item>Verbs - Basic 1</item>
+        <item>Verbs - Basic 2</item>
+        <item>Adjectives - Basic 1</item>
+        <item>Professions</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>@string/spinner_language_notSelected</item>
+        <item>한국어</item>
+        <item>영어</item>
+        <item>포르투갈어</item>>
+    </string-array>
+
+    //ITEM STRINGS
+    <string name="by">작성자: </string>
+</resources>

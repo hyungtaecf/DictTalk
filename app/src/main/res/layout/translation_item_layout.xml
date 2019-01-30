@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/default_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTranslationText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:singleLine="false"
+        android:text="@string/sample_word"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScore"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+
+    <ImageButton
+        android:id="@+id/buttonComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="18dp"
+        android:maxHeight="18dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/ic_comment"
+        android:focusable="false"
+        app:layout_constraintStart_toStartOf="@+id/textViewTranslationText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
+
+    <TextView
+        android:id="@+id/textViewCommentsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="7"
+        app:layout_constraintStart_toEndOf="@+id/buttonComment"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
+
+    <ImageButton
+        android:id="@+id/textViewTranslationFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="18dp"
+        android:maxHeight="18dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/ic_flag"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTranslationText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
+
+    <ImageButton
+        android:id="@+id/buttonTranslationLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@null"
+        android:src="@drawable/ic_arrow_drop_up"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/textViewScore"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonTranslationDislike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:src="@drawable/ic_arrow_drop_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:text="@string/sample_username"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageProfile"
+        app:layout_constraintStart_toEndOf="@+id/imageProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="32"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTranslationFlag"
+        app:layout_constraintEnd_toEndOf="@+id/buttonTranslationLike"
+        app:layout_constraintStart_toStartOf="@+id/buttonTranslationLike"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/source2"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textViewTranslationText"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTranslationText" />
+
+    <TextView
+        android:id="@+id/textViewSource"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:autoLink="web"
+        android:text="@string/sample_source"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSourceLabel"
+        app:layout_constraintEnd_toStartOf="@+id/textViewScore"
+        app:layout_constraintStart_toEndOf="@+id/textViewSourceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTranslationText" />
+
+    <TextView
+        android:id="@+id/line"
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#AAA"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonComment" />
+
+    <ImageButton
+        android:id="@+id/buttonAddToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:src="@drawable/ic_list_add"
+        android:textStyle="bold"
+        android:focusable="false"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintEnd_toEndOf="@+id/imageProfile"
+        app:layout_constraintStart_toStartOf="@+id/imageProfile"
+        app:layout_constraintTop_toBottomOf="@+id/textViewReputation" />
+
+    <ImageView
+        android:id="@+id/iconReputation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="10dp"
+        android:maxWidth="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_stars"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewUsername"
+        app:layout_constraintStart_toEndOf="@+id/textViewUsername"
+        app:layout_constraintTop_toTopOf="@+id/textViewUsername" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_time"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintEnd_toStartOf="@+id/textViewTranslationFlag"
+        app:layout_constraintStart_toEndOf="@+id/textViewCommentsCount"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSource" />
+
+    <TextView
+        android:id="@+id/textViewReputation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_reputation"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewUsername"
+        app:layout_constraintStart_toEndOf="@+id/iconReputation"
+        app:layout_constraintTop_toTopOf="@+id/textViewUsername" />
+
+
+</android.support.constraint.ConstraintLayout>

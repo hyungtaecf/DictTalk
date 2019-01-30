@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hyungtaecfigur.dicttalk">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".MainMenuActivity" />
+        <activity android:name=".CommunityMainActivity" />
+        <activity android:name=".MyListsMainActivity" />
+        <activity
+            android:name=".WordMeaningsActivity"
+            android:label="@string/title_activity_word_meanings"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchUsersActivity"
+            android:label="@string/title_activity_search_users"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SearchListsActivity"
+            android:label="@string/title_activity_search_lists"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WordsOfTheDayMainActivity" />
+        <activity android:name=".SupportMainActivity" />
+        <activity android:name=".KoreanDictionaryActivity" />
+        <activity android:name=".MyProfileActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".WordRegistrationActivity" />
+        <activity android:name=".WordActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".HashtagSearchActivity" />
+        <activity android:name=".RequestMainActivity" />
+        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".SelectDictionaryActivity" />
+        <activity android:name=".DictionarySearchActivity" />
+        <activity android:name=".DictChatLoginActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".chat.MessageActivity" />
+        <activity android:name=".fragment.SelectFriendActivity" />
+        <activity android:name=".chat.GroupMessageActivity" />
+        <activity android:name=".DictChatActivity" />
+        <activity android:name=".ListsActivity" />
+        <activity android:name=".AddRequestActivity" />
+        <activity android:name=".AddToListActivity"></activity>
+    </application>
+
+</manifest>

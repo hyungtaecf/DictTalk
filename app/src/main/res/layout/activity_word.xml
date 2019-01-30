@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WordActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:id="@+id/app_bar"/>
+    <include
+        layout="@layout/bottom_navigation"
+        android:id="@+id/bottom_navigation" />
+
+    <EditText
+        android:id="@+id/editTextSearchWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/app_bar"
+        android:layout_marginEnd="109dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/buttonSearch"
+        android:ems="10"
+        android:hint="@string/search_another_word"
+        android:inputType="textCapCharacters" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/search"
+        android:layout_below="@+id/app_bar"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/textViewDictionary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_dictionary"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/editTextSearchWord"
+        />
+
+    <TextView
+        android:id="@+id/textViewWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDictionary"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sample_word"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/textViewWordDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/textViewWord"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/sample_word_description" />
+    <!--TODO ON CODE textView.setJustificationMode(JUSTIFICATION_MODE_INTER_WORD);-->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewWordDescription"
+        android:weightSum="7"
+        android:background="#000000"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/buttonTranslations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#6369D1"
+            android:src="@drawable/ic_translation_white"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/buttonSentences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#E08DAC"
+            android:src="@drawable/ic_sentence"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonSynonyms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#C2BBF0"
+            android:src="@drawable/ic_synonym"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonAntonyms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#E5B181"
+            android:src="@drawable/ic_antonym"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonHashtags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#5FBFF9"
+            android:src="@drawable/ic_hashtag"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="#F4FEC1"
+            android:src="@drawable/ic_chat_bubble_outline"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/buttonReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#BB0A21"
+            android:src="@drawable/ic_flag"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/buttonAddToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:src="@drawable/ic_list_add"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/buttonSearch"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutTabs"
+        android:layout_above="@+id/buttonAddNew"
+        android:layout_marginTop="8dp"
+        >
+
+        <ListView
+            android:id="@+id/listViewTranslations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <!--TODO Essa parte tem que mudar, tem que fazer outro activity.são vários campos para inserir-->
+
+    <Button
+        android:id="@+id/buttonAddNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/add_new" />
+
+
+</RelativeLayout>

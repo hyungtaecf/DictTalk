@@ -10,7 +10,7 @@ This project can be divided in 3 stages.<br>
 First stage:
 
 - Making a free dictionary, where anyone can add words and translations
-- Implementing rate system through likes and dislikes
+- Implementing evaluation system through likes and dislikes
 - Saving words in lists
 - Implementing User Search
 
